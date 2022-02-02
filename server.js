@@ -26,7 +26,7 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", (req, res) =>{
-  res.json({ip});
+  res.json({ipaddress: req.socket.localAddress, language: "English", software: "Header Parser Microservice"});
 });
 
 // listen for requests :)
